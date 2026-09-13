@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>D'EVIL STEAKHOUSE & GRILL | Primal Cuts & Flaming Fire</title>
+  <meta name="description" content="D'EVIL Steakhouse & Grill: Ferocious dry-aged steaks, wood-fired cuts, interactive dining, and real-time kitchen management." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      
+      <a href="#" class="brand-wrap">
+        <img src="assets/logo.jpg" alt="D'EVIL Steakhouse & Grill Logo" class="brand-logo-img" />
+        <div class="brand-text">
+          <span class="brand-title">D’EVIL</span>
+          <span class="brand-subtitle">STEAKHOUSE & GRILL</span>
+        </div>
+      </a>
+
+      <div class="view-mode-pill">
+        <button id="nav-to-customer" class="view-btn active">🔥 Primal Dining</button>
+        <button id="nav-to-staff" class="view-btn">⚙️ Grill & Staff Hub</button>
+      </div>
+
+      <div class="header-actions">
+        <a href="#reservation-section" id="nav-book-table-btn" class="btn btn-outline btn-sm">Lock Table</a>
+        <button id="header-cart-btn" class="cart-icon-btn" aria-label="View Order Cart">
+          <span>🛒</span>
+          <span>Feast</span>
+          <span class="cart-count-badge" style="display: none;">0</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <main id="customer-view" class="app-view active">
+    
+    <section class="hero-section">
+      <div class="container hero-content">
+        <img src="assets/logo.jpg" alt="D'EVIL Steakhouse & Grill Emblem" class="hero-logo-center" />
+        <span class="hero-tag">PRIMAL CUTS & INFERNAL FLAME</span>
+        <h1 class="hero-title">Forged in Fire. Aged in Darkness.</h1>
+        <p class="hero-subtitle">
+          Unleash your primal appetite. 45-day dry-aged Wagyu Tomahawks, blistered woodfire pizzas, and wicked smoked cocktails.
+        </p>
+        <div class="hero-cta-row">
+          <button id="hero-view-menu-btn" class="btn btn-crimson">Explore The Fiery Menu</button>
+          <button id="hero-reserve-btn" class="btn btn-outline">Claim Your Table</button>
+        </div>
+
+        <div class="hero-highlights-strip">
+          <div class="highlight-box">
+            <span class="highlight-icon">🔥</span>
+            <div class="highlight-info">
+              <h4>Binchotan Charcoal</h4>
+              <p>White-hot 1000° searing for razor crust</p>
+            </div>
+          </div>
+          <div class="highlight-box">
+            <span class="highlight-icon">🥩</span>
+            <div class="highlight-info">
+              <h4>45-Day Dry-Aged Wagyu</h4>
+              <p>Tomahawk & bone marrow basting</p>
+            </div>
+          </div>
+          <div class="highlight-box">
+            <span class="highlight-icon">🥃</span>
+            <div class="highlight-info">
+              <h4>Wicked Mixology</h4>
+              <p>Torched botanicals & smoking bourbon</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu-section" class="menu-section">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-subtitle">Forged in Flame</span>
+          <h2 class="section-title">The Devil's Feast Menu</h2>
+          <p>Order directly for your table or summon for takeaway.</p>
+        </div>
+
+        <div class="menu-controls-bar">
+          
+          <div class="search-input-wrap">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="menu-search" class="menu-search-input" placeholder="Search steaks, cuts, fiery drinks (e.g. Tomahawk, Ribeye, Wings)..." />
+          </div>
+
+          <nav id="category-nav" class="category-nav-bar" aria-label="Menu categories"></nav>
+
+          <div class="dietary-filter-bar">
+            <button class="dietary-chip active" data-filter="all">All Feasts</button>
+            <button class="dietary-chip" data-filter="Chef Favorite">⭐ Devil's Pick</button>
+            <button class="dietary-chip" data-filter="Signature Cut">🔪 Signature Cut</button>
+            <button class="dietary-chip" data-filter="Spicy">🌶️ Hellfire Spicy</button>
+            <button class="dietary-chip" data-filter="Gluten-Free">🌾 Gluten-Free</button>
+            <button class="dietary-chip" data-filter="Vegetarian">🌱 Vegetarian</button>
+          </div>
+
+        </div>
+
+        <div id="menu-grid" class="menu-grid"></div>
+
+      </div>
+    </section>
+
+    <section id="reservation-section" class="reservation-section">
+      <div class="container">
+        <div class="reservation-card">
+          <div class="section-header">
+            <span class="section-subtitle">Exclusive Pit Seating</span>
+            <h2 class="section-title">Claim Your Table</h2>
+            <p>Secure your spot by the flames. Instant confirmation upon booking.</p>
+          </div>
+
+          <form id="reservation-form">
+            <div class="form-grid">
+              
+              <div class="form-group">
+                <label class="form-label" for="res-name">Primary Guest Name *</label>
+                <input type="text" id="res-name" class="form-control" placeholder="e.g. Viktor Thorne" required />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="res-phone">Phone Number *</label>
+                <input type="tel" id="res-phone" class="form-control" placeholder="+1 (555) 666-0000" required />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="res-email">Email Address</label>
+                <input type="email" id="res-email" class="form-control" placeholder="viktor@example.com" />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="res-guests">Party Size *</label>
+                <select id="res-guests" class="form-control" required>
+                  <option value="2">2 Guests (Duo Feast)</option>
+                  <option value="4" selected>4 Guests (Pit Table)</option>
+                  <option value="6">6 Guests (Syndicate)</option>
+                  <option value="8">8 Guests (VIP Warlock Vault)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="res-date">Reservation Date *</label>
+                <input type="date" id="res-date" class="form-control" required />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="res-time">Feast Time *</label>
+                <select id="res-time" class="form-control" required>
+                  <option value="17:30">5:30 PM (Early Twilight)</option>
+                  <option value="18:30">6:30 PM</option>
+                  <option value="19:30" selected>7:30 PM (Prime Flame)</option>
+                  <option value="20:30">8:30 PM</option>
+                  <option value="21:30">9:30 PM</option>
+                  <option value="22:30">10:30 PM (Midnight Hour)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="res-section">Atmosphere & Vault Section *</label>
+                <select id="res-section" class="form-control" required>
+                  <option value="Ember Pit Room">Ember Pit Room (Live Flame View)</option>
+                  <option value="Flames & Forge">Flames & Forge Main Dining</option>
+                  <option value="Hellfire Terrace">Hellfire Garden Terrace</option>
+                  <option value="Inferno Rooftop">Inferno Skyline Rooftop</option>
+                  <option value="VIP Warlock Vault">VIP Warlock Vault (Private Dining)</option>
+                </select>
+              </div>
+
+              <div class="form-group full-width">
+                <label class="form-label" for="res-requests">Butcher Notes, Pairings & Celebrations</label>
+                <textarea id="res-requests" class="form-control" placeholder="Tomahawk carving preferences, rare whiskey requests, birthday or celebration notes..."></textarea>
+              </div>
+
+              <div class="form-group full-width text-center" style="margin-top: 1rem;">
+                <button type="submit" class="btn btn-crimson" style="width: 100%; max-width: 340px; margin: 0 auto;">
+                  Lock In Table Reservation
+                </button>
+              </div>
+
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer" style="padding: 3.5rem 0 2rem; border-top: 1px solid var(--border-crimson); text-align: center; color: var(--text-muted);">
+      <div class="container">
+        <img src="assets/logo.jpg" alt="D'EVIL Steakhouse Logo" style="width: 54px; height: 54px; border-radius: 50%; border: 2px solid var(--crimson-bright); margin-bottom: 0.8rem;" />
+        <h3 style="color: var(--crimson-bright); margin-bottom: 0.5rem; letter-spacing: 0.08em;">D’EVIL STEAKHOUSE & GRILL</h3>
+        <p style="font-size: 0.9rem; margin-bottom: 0.8rem;">666 Brimstone Alley, Downtown Arts District • Tel: +1 (555) 666-3845</p>
+        <p style="font-size: 0.8rem;">Wed - Mon: 5:00 PM - 2:00 AM (Tue: Closed) • Guest Wi-Fi: <code>DEVIL_GUEST_WIFI</code></p>
+      </div>
+    </footer>
+
+  </main>
+
+  <main id="staff-view" class="app-view">
+    <div class="container admin-hub-container">
+      
+      <div class="admin-header-bar">
+        <div>
+          <h2 style="font-size: 1.8rem; margin-bottom: 0.2rem;">Back-of-House Command Hub</h2>
+          <p style="font-size: 0.85rem;">Live floor monitoring, KDS fire tickets, cut pricing, and real-time revenue analytics.</p>
+        </div>
+        
+        <div class="admin-nav-tabs">
+          <button class="admin-nav-tab active" data-tab="tables">🗺️ Floor & Tables</button>
+          <button class="admin-nav-tab" data-tab="kds">🍳 Kitchen Display (KDS)</button>
+          <button class="admin-nav-tab" data-tab="menu">📋 Menu & 86 Editor</button>
+          <button class="admin-nav-tab" data-tab="reservations">📅 Reservations Log</button>
+          <button class="admin-nav-tab" data-tab="analytics">📊 Sales & Billing</button>
+        </div>
+      </div>
+
+      <div id="admin-panel-tables" class="admin-view-panel active">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.2rem;">
+          <h3>Floor Layout & Table Seating</h3>
+          <div style="display: flex; gap: 1rem; font-size: 0.8rem;">
+            <span style="color: #34D399;">● Available</span>
+            <span style="color: #FFA4A4;">● Occupied</span>
+            <span style="color: #60A5FA;">● Reserved</span>
+            <span style="color: #FBBF24;">● Cleaning</span>
+          </div>
+        </div>
+        <div id="floor-map-grid" class="floor-map-grid"></div>
+      </div>
+
+      <div id="admin-panel-kds" class="admin-view-panel">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.2rem;">
+          <h3>Active Fire Ticket Queue</h3>
+          <span class="badge badge-crimson">Live Grill Feed</span>
+        </div>
+        <div id="kds-tickets-container" class="kds-grid"></div>
+      </div>
+
+      <div id="admin-panel-menu" class="admin-view-panel">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.2rem; flex-wrap: wrap; gap: 0.8rem;">
+          <div>
+            <h3>Menu Pricing & 86 Inventory</h3>
+            <p style="font-size: 0.85rem;">Toggle cut availability in real-time or adjust dish prices.</p>
+          </div>
+          <button id="btn-open-add-dish-modal" class="btn btn-crimson btn-sm">+ Add New Cut</button>
+        </div>
+        
+        <div class="admin-table-wrap">
+          <table class="admin-data-table">
+            <thead>
+              <tr>
+                <th>Photo</th>
+                <th>Dish Name & Description</th>
+                <th>Category</th>
+                <th>Price ($)</th>
+                <th>Availability</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="menu-manager-table-body"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="admin-panel-reservations" class="admin-view-panel">
+        <h3 style="margin-bottom: 1.2rem;">Upcoming Vault Reservations</h3>
+        <div class="admin-table-wrap">
+          <table class="admin-data-table">
+            <thead>
+              <tr>
+                <th>Guest & Contact</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Party Size</th>
+                <th>Seating Section</th>
+                <th>Special Notes</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="admin-reservations-list"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="admin-panel-analytics" class="admin-view-panel">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 0.8rem;">
+          <div>
+            <h3>Operational Analytics & Grill Revenue</h3>
+            <p style="font-size: 0.85rem;">Shift metrics, average check size, and popularity leaderboards.</p>
+          </div>
+          <button id="admin-reset-data-btn" class="btn btn-outline btn-sm">↺ Reset Demo Data</button>
+        </div>
+
+        <div class="stats-cards-grid">
+          <div class="stat-metric-card">
+            <div class="stat-icon-wrap">💰</div>
+            <div>
+              <div id="stat-revenue" class="stat-metric-val">$0.00</div>
+              <div class="stat-metric-lbl">Total Shift Sales</div>
+            </div>
+          </div>
+          <div class="stat-metric-card">
+            <div class="stat-icon-wrap">🔥</div>
+            <div>
+              <div id="stat-active-orders" class="stat-metric-val">0</div>
+              <div class="stat-metric-lbl">Active Grill Tickets</div>
+            </div>
+          </div>
+          <div class="stat-metric-card">
+            <div class="stat-icon-wrap">🪑</div>
+            <div>
+              <div id="stat-occupied-tables" class="stat-metric-val">0/8</div>
+              <div class="stat-metric-lbl">Table Occupancy</div>
+            </div>
+          </div>
+          <div class="stat-metric-card">
+            <div class="stat-icon-wrap">📈</div>
+            <div>
+              <div id="stat-avg-ticket" class="stat-metric-val">$0.00</div>
+              <div class="stat-metric-lbl">Avg. Ticket Size</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="analytics-split-layout">
+          <div class="analytics-box">
+            <h4 style="margin-bottom: 1rem; color: var(--crimson-bright);">Top-Selling Prime Cuts</h4>
+            <div id="analytics-top-dishes"></div>
+          </div>
+          <div class="analytics-box">
+            <h4 style="margin-bottom: 1rem; color: var(--crimson-bright);">Grill Master Shift Notes</h4>
+            <p style="font-size: 0.88rem; line-height: 1.6;">
+              • Tonight's Special: <em>45-Day Dry Aged Tomahawk (32oz)</em> basted in smoked bone marrow butter.<br>
+              • Pre-theatre surge expected between 6:00 PM - 7:30 PM.<br>
+              • VIP Warlock Vault Table #8 reserved for Syndicate Feast at 8:30 PM.<br>
+              • Reminder: Mark 86'd cuts immediately in the Menu tab.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <div id="item-detail-modal" class="modal-overlay">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="modal-item-title">Cut Details</h3>
+        <button class="close-modal-btn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <img id="modal-item-img" src="" alt="Dish Preview" class="modal-img-banner" />
+        <div id="modal-item-tags" style="margin-bottom: 0.8rem;"></div>
+        
+        <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.8rem;">
+          <span id="modal-item-price" style="font-size: 1.4rem; font-weight: 800; color: var(--ember-gold);">$0.00</span>
+          <div style="font-size: 0.85rem; color: var(--text-muted);">
+            ⏱️ <span id="modal-item-prep"></span> • 🔥 <span id="modal-item-cal"></span> • <span id="modal-item-rating"></span>
+          </div>
+        </div>
+
+        <p id="modal-item-desc" style="margin-bottom: 1.2rem; font-size: 0.95rem;"></p>
+
+        <div class="form-group" style="margin-bottom: 1.2rem;">
+          <label class="form-label" for="modal-special-notes">Pitmaster Notes / Prep Requests:</label>
+          <input type="text" id="modal-special-notes" class="form-control" placeholder="e.g. Medium rare, flamed table-side, sauce on side" />
+        </div>
+
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: 1.5rem;">
+          <div class="qty-stepper">
+            <button id="modal-qty-minus" class="qty-btn">-</button>
+            <input type="number" id="modal-quantity" class="qty-input" value="1" min="1" max="20" readonly />
+            <button id="modal-qty-plus" class="qty-btn">+</button>
+          </div>
+          <button id="modal-add-to-cart-btn" class="btn btn-crimson" style="flex-grow: 1;">Add to Feast</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="cart-modal" class="modal-overlay">
+    <div class="modal-content" style="max-width: 520px;">
+      <div class="modal-header">
+        <h3>🛒 Your Feast Order</h3>
+        <button class="close-modal-btn">&times;</button>
+      </div>
+      <div class="modal-body">
+        
+        <div class="order-type-switch">
+          <label style="display: flex; align-items: center; gap: 0.4rem; cursor: pointer;">
+            <input type="radio" name="cart-order-type" value="dine-in" checked /> 🥩 Dine-in Table
+          </label>
+          <label style="display: flex; align-items: center; gap: 0.4rem; cursor: pointer;">
+            <input type="radio" name="cart-order-type" value="takeaway" /> 🥡 Takeaway
+          </label>
+          <label style="display: flex; align-items: center; gap: 0.4rem; cursor: pointer;">
+            <input type="radio" name="cart-order-type" value="delivery" /> 🚗 Delivery
+          </label>
+        </div>
+
+        <div id="cart-table-group" class="form-group" style="margin-bottom: 1rem;">
+          <label class="form-label" for="cart-table-select">Select Your Table Number:</label>
+          <select id="cart-table-select" class="form-control"></select>
+        </div>
+
+        <div id="cart-delivery-group" class="form-group" style="display: none; margin-bottom: 1rem;">
+          <label class="form-label" for="cart-delivery-address">Delivery Address:</label>
+          <input type="text" id="cart-delivery-address" class="form-control" placeholder="Street address, Apt / Suite" />
+        </div>
+
+        <div class="form-group" style="margin-bottom: 1rem;">
+          <label class="form-label" for="cart-customer-name">Guest / Party Name:</label>
+          <input type="text" id="cart-customer-name" class="form-control" placeholder="Your name (e.g. Jaxson M.)" />
+        </div>
+
+        <div id="cart-items-list" style="max-height: 240px; overflow-y: auto; margin: 1rem 0;"></div>
+
+        <div style="margin: 1rem 0 0.5rem;">
+          <label class="form-label">Add Pitmaster & Staff Gratuity:</label>
+          <div class="tip-selection-row">
+            <button class="tip-btn" data-tip="0.10">10%</button>
+            <button class="tip-btn active" data-tip="0.15">15%</button>
+            <button class="tip-btn" data-tip="0.20">20%</button>
+            <button class="tip-btn" data-tip="0.25">25%</button>
+          </div>
+        </div>
+
+        <div class="cart-summary-totals">
+          <div class="summary-line">
+            <span>Subtotal:</span>
+            <span id="cart-subtotal">$0.00</span>
+          </div>
+          <div class="summary-line">
+            <span>Estimated Tax (9%):</span>
+            <span id="cart-tax">$0.00</span>
+          </div>
+          <div class="summary-line">
+            <span>Hospitality Gratuity:</span>
+            <span id="cart-tip">$0.00</span>
+          </div>
+          <div class="summary-line grand-total">
+            <span>Total:</span>
+            <span id="cart-total-price">$0.00</span>
+          </div>
+        </div>
+
+        <button id="checkout-submit-btn" class="btn btn-crimson" style="width: 100%; margin-top: 1.5rem;">
+          Fire Order to Grill ➔
+        </button>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="order-confirmation-modal" class="modal-overlay">
+    <div class="modal-content" style="max-width: 440px; text-align: center;">
+      <div class="modal-body" style="padding: 2.5rem 1.5rem;">
+        <div style="font-size: 3.5rem; margin-bottom: 0.8rem;">🔥🥩</div>
+        <h3 style="font-size: 1.5rem; margin-bottom: 0.4rem;">Order Fired to the Grill!</h3>
+        <p style="font-size: 0.9rem; margin-bottom: 1.5rem;">The pitmaster has received your ticket.</p>
+        
+        <div style="background: var(--bg-primary); border: 1px solid var(--border-crimson); border-radius: var(--radius-sm); padding: 1.2rem; margin-bottom: 1.5rem; text-align: left;">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+            <span class="text-muted">Order Ticket:</span>
+            <strong id="conf-order-num" style="color: var(--crimson-bright);">#101</strong>
+          </div>
+          <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+            <span class="text-muted">Type:</span>
+            <span id="conf-order-type">Dine-In</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+            <span class="text-muted">Guest:</span>
+            <span id="conf-order-name">Jaxson M.</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; border-top: 1px dashed var(--border-subtle); padding-top: 0.4rem; margin-top: 0.4rem;">
+            <span class="text-muted">Total Amount:</span>
+            <strong id="conf-order-total" style="color: var(--ember-gold);">$0.00</strong>
+          </div>
+        </div>
+
+        <button class="btn btn-crimson close-modal-btn" style="width: 100%;">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="reservation-conf-modal" class="modal-overlay">
+    <div class="modal-content" style="max-width: 440px; text-align: center;">
+      <div class="modal-body" style="padding: 2.5rem 1.5rem;">
+        <div style="font-size: 3.5rem; margin-bottom: 0.8rem;">🔥🥂</div>
+        <h3 style="font-size: 1.5rem; margin-bottom: 0.4rem;">Reservation Locked In</h3>
+        <p style="font-size: 0.9rem; margin-bottom: 1.5rem;">Your vault is secured at D’EVIL Steakhouse & Grill.</p>
+        
+        <div style="background: var(--bg-primary); border: 1px solid var(--border-crimson); border-radius: var(--radius-sm); padding: 1.2rem; margin-bottom: 1.5rem; text-align: left;">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+            <span class="text-muted">Booking Reference:</span>
+            <strong id="res-conf-code" style="color: var(--crimson-bright);">#DEVIL88</strong>
+          </div>
+          <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+            <span class="text-muted">Guest Name:</span>
+            <span id="res-conf-name">Viktor Thorne</span>
+          </div>
+          <div style="margin-top: 0.6rem; font-size: 0.85rem; color: #FFA4A4;" id="res-conf-details"></div>
+        </div>
+
+        <button class="btn btn-crimson close-modal-btn" style="width: 100%;">Return to Portal</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="table-status-modal" class="modal-overlay">
+    <div class="modal-content" style="max-width: 440px;">
+      <div class="modal-header">
+        <h3 id="table-modal-title">Manage Table</h3>
+        <button class="close-modal-btn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group" style="margin-bottom: 1rem;">
+          <label class="form-label" for="table-status-select">Table Status:</label>
+          <select id="table-status-select" class="form-control">
+            <option value="available">🟢 Available (Ready for seating)</option>
+            <option value="occupied">🔴 Occupied (Seated)</option>
+            <option value="reserved">🔵 Reserved</option>
+            <option value="cleaning">🟡 Cleaning / Sanitizing</option>
+          </select>
+        </div>
+        <div class="form-group" style="margin-bottom: 1.5rem;">
+          <label class="form-label" for="table-guest-input">Guest / Party Name:</label>
+          <input type="text" id="table-guest-input" class="form-control" placeholder="Guest name (optional)" />
+        </div>
+        <button id="table-status-save-btn" class="btn btn-crimson" style="width: 100%;">Save Table Changes</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="receipt-modal" class="modal-overlay">
+    <div class="modal-content" style="max-width: 480px;">
+      <div class="modal-header">
+        <h3>🧾 Table Bill & Receipt</h3>
+        <button class="close-modal-btn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="receipt-paper">
+          <div class="receipt-header">
+            <h2 id="receipt-restaurant-name" style="font-size: 1.2rem; color: #000;">D’EVIL STEAKHOUSE & GRILL</h2>
+            <p id="receipt-restaurant-tagline" style="font-size: 0.75rem; color: #555;"></p>
+            <p id="receipt-restaurant-address" style="font-size: 0.75rem; color: #555;"></p>
+            <p id="receipt-restaurant-phone" style="font-size: 0.75rem; color: #555;"></p>
+            <p id="receipt-wifi" style="font-size: 0.75rem; color: #777; margin-top: 0.3rem;"></p>
+          </div>
+
+          <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 0.5rem;">
+            <span id="receipt-order-id"></span>
+            <span id="receipt-table-num"></span>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 0.8rem;">
+            <span>Guest: <strong id="receipt-guest-name"></strong></span>
+            <span id="receipt-date"></span>
+          </div>
+
+          <table class="receipt-items-table">
+            <tbody id="receipt-items-tbody"></tbody>
+          </table>
+
+          <div style="border-top: 1px dashed #444; padding-top: 0.5rem; display: flex; flex-direction: column; gap: 0.3rem;">
+            <div style="display: flex; justify-content: space-between;"><span>Subtotal:</span><span id="receipt-subtotal"></span></div>
+            <div style="display: flex; justify-content: space-between;"><span>Tax (9%):</span><span id="receipt-tax"></span></div>
+            <div style="display: flex; justify-content: space-between;"><span>Gratuity:</span><span id="receipt-tip"></span></div>
+            <div style="display: flex; justify-content: space-between; font-weight: bold; font-size: 1.1rem; border-top: 1px dashed #333; padding-top: 0.4rem;">
+              <span>Total Due:</span><span id="receipt-total"></span>
+            </div>
+          </div>
+
+          <div class="receipt-footer">
+            <p>Thank you for feasting with us!</p>
+            <p>Return to the fire soon.</p>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 0.8rem; margin-top: 1.2rem;">
+          <button id="receipt-print-btn" class="btn btn-outline" style="flex: 1;">🖨️ Print Receipt</button>
+          <button id="receipt-mark-paid-btn" class="btn btn-crimson" style="flex: 1;">Mark Bill Paid</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="add-menu-modal" class="modal-overlay">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>+ Add New Primal Cut</h3>
+        <button class="close-modal-btn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="add-menu-form">
+          <div class="form-grid">
+            
+            <div class="form-group full-width">
+              <label class="form-label" for="new-item-name">Cut / Dish Title *</label>
+              <input type="text" id="new-item-name" class="form-control" placeholder="e.g. Flame-Seared Porterhouse (24oz)" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="new-item-category">Category *</label>
+              <select id="new-item-category" class="form-control" required>
+                <option value="steaks">Primal Steaks & Cuts</option>
+                <option value="starters">Ember Starters</option>
+                <option value="woodfire">Inferno Woodfire</option>
+                <option value="seafood">Charred Ocean</option>
+                <option value="desserts">Molten Desserts</option>
+                <option value="drinks">Smoked Alchemy & Brews</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="new-item-price">Price ($ USD) *</label>
+              <input type="number" step="0.50" id="new-item-price" class="form-control" placeholder="65.00" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="new-item-prep">Prep Time</label>
+              <input type="text" id="new-item-prep" class="form-control" placeholder="18-22 min" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="new-item-cal">Calories</label>
+              <input type="text" id="new-item-cal" class="form-control" placeholder="850 kcal" />
+            </div>
+
+            <div class="form-group full-width">
+              <label class="form-label" for="new-item-desc">Culinary Description & Woodfire Prep *</label>
+              <textarea id="new-item-desc" class="form-control" placeholder="Aging method, wood species, rub, and flame finishing..." required></textarea>
+            </div>
+
+            <div class="form-group full-width">
+              <label class="form-label" for="new-item-img">Photo Image URL</label>
+              <input type="url" id="new-item-img" class="form-control" placeholder="https://images.unsplash.com/..." />
+            </div>
+
+            <div class="form-group full-width">
+              <label class="form-label">Dietary & Chef Badges:</label>
+              <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 0.3rem;">
+                <label><input type="checkbox" name="new-dietary" value="Chef Favorite" /> ⭐ Devil's Pick</label>
+                <label><input type="checkbox" name="new-dietary" value="Signature Cut" /> 🔪 Signature Cut</label>
+                <label><input type="checkbox" name="new-dietary" value="Spicy" /> 🌶️ Hellfire Spicy</label>
+                <label><input type="checkbox" name="new-dietary" value="Gluten-Free" /> 🌾 Gluten-Free</label>
+                <label><input type="checkbox" name="new-dietary" value="Vegetarian" /> 🌱 Vegetarian</label>
+              </div>
+            </div>
+
+            <div class="form-group full-width" style="margin-top: 1rem;">
+              <button type="submit" class="btn btn-crimson" style="width: 100%;">Create & Publish Cut</button>
+            </div>
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast-container"></div>
+
+  <script type="module" src="js/app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,125 @@
+@media (max-width: 1024px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .analytics-split-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.8rem;
+  }
+
+  .brand-wrap {
+    justify-content: center;
+  }
+
+  .view-mode-pill {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .view-btn {
+    flex: 1;
+    text-align: center;
+  }
+
+  .header-actions {
+    justify-content: center;
+  }
+
+  .hero-title {
+    font-size: 2.1rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .hero-highlights-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .category-nav-bar {
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding-bottom: 0.5rem;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+  .category-btn {
+    flex-shrink: 0;
+  }
+
+  .dietary-filter-bar {
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding-bottom: 0.3rem;
+    flex-wrap: nowrap;
+  }
+  .dietary-chip {
+    flex-shrink: 0;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reservation-card {
+    padding: 1.5rem;
+  }
+
+  .admin-header-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .admin-nav-tabs {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 0.5rem;
+  }
+  .admin-nav-tab {
+    flex-shrink: 0;
+  }
+
+  .floor-map-grid, .kds-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-cards-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .modal-content {
+    max-height: 95vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-cta-row {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-cta-row .btn {
+    width: 100%;
+  }
+
+  .brand-title {
+    font-size: 1.1rem;
+  }
+}
